@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        // Function to copy transcript text to clipboard
+        function copyTranscript() {
+            var transcriptTextarea = document.getElementById("transcriptTextarea");
+            var transcriptText = transcriptTextarea.value;
+
+            // Use the Clipboard API to write the text
+            navigator.clipboard.writeText(transcriptText).then(function() {
+                console.log('Transcript copied to clipboard successfully!');
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        // Call the copy function after the page has loaded
+        window.onload = function() {
+            copyTranscript();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>YouTube Transcript Extractor</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="https://translate.google.co.in/">Google Translate</a></li>
+                <!-- Add PDF button -->
+                <form action="/generate_pdf" method="post" target="_blank" style="display: inline;">
+                    <input type="hidden" name="transcript" value="{{ transcript }}">
+                    <li><button type="submit">PDF</button></li>
+                </form>
+            </ul>
+        </nav>
+    </header>
+    <h2>Transcript</h2>
+    <textarea id="transcriptTextarea" readonly>{{ transcript }}</textarea>
+</body>
+</html>

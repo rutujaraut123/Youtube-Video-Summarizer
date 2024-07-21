@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Additional inline CSS for the input field */
+        #link {
+            width: 60%; /* Set width to 80% of the parent container */
+            height: 40px; /* Set height to 40 pixels */
+            padding: px; /* Add padding inside the input field */
+            font-size: 16px; /* Set font size to 16 pixels */
+            border-radius: 4px; /* Add rounded corners */
+            border: 1px solid #ccc; /* Add a border for better visibility */
+        }
+    </style></head>
+<body>
+    <header>
+        <h1>YouTube Transcript Extractor</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="/get_transcript" method="post">
+        <h2>Paste YouTube Link</h2>
+        <!-- <label for="link">Enter YouTube Video Link:</label><br> -->
+        <input type="text" id="link" name="link" placeholder="Enter URL Of Video"><br>
+        <button type="submit">Get Transcript</button>
+    </form>
+</body>
+</html>

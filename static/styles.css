@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #716262;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(40, 11, 68, 0.7); /* Slightly more opaque background */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 28px; /* Increase font size for better visibility */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Reduced margin between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px; /* Slightly larger font size for better readability */
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #007bff; /* Blue color for heading */
+    text-align: center;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%; /* Adjusted width for better text area size */
+    height: 60vh; /* Adjusted height for better readability */
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc; /* Added border for better visual separation */
+    font-size: 16px;
+    line-height: 1.6em;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+}
